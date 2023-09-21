@@ -8,10 +8,10 @@ const sufferingInputElement = formElement.querySelector("#suffering");
 //recibe un nombre y hace que el elemento HTML con clase name muestre ese nombre. También debe mostrarse en el texto alternativo de la imagen
 
 const setName = (name) => {
-  const removeClassName = document.querySelector("h2");
-  removeClassName.classList.remove("off");
+  document.querySelector("h2").classList.remove("off");
+  document.querySelector(".name").textContent = name;
 
-  const nameElement = (document.querySelector(".name").textContent = name);
+  document.querySelector("img").setAttribute("alt", name);
 };
 
 formElement.addEventListener("change", (event) => {
